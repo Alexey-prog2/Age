@@ -1,28 +1,26 @@
 using System;
-
-namespace Age
-{
-  class User
-  {
-    public string name;
-    public int age;
-    
-    public void DisplayInfo()
+ 
+namespace HelloApp
+{ 
+    struct User
     {
-      Console.WriteLine($"Name: {name} Age: {age}:);
+        public int age;
+ 
+        public void DisplayInfo()
+        {
+            Console.WriteLine($"Age: {age}");
+        }
     }
-  }
-  
-  class Program
-  {
-    static void Main(string[] args)
+ 
+    class Program
     {
-      User tom;
-      tom.name = "Tom";
-      tom.age = 34;
-      tom.DisplayInfo();
-      
-      Console.ReadKey();
+        static void Main(string[] args)
+        {
+            User tom;
+            tom.age = 34;
+            tom.DisplayInfo();
+             
+            Console.ReadKey();
+        }
     }
-  }
 }
